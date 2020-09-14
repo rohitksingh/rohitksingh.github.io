@@ -70,6 +70,15 @@
             animation: rover-animation 40s infinite forwards;
         }
 
+        #cactus{
+            height: 120px;
+            width: 120px;
+            position: relative;
+            top: 70%;
+            left: 30px;
+            animation: cactus-animation 60s infinite forwards;
+        }
+
         @font-face {
             font-family: 'MyFont'; 
             src: url(Arvo-Regular.ttf); 
@@ -111,6 +120,21 @@
                 }
                 100%{
                     transform: translate3d(3000px,0px,0px)
+                }
+            }
+
+            @keyframes cactus-animation {
+                0% {
+                    transform: translate3d(0px,0px,0px)
+                }
+                50% {
+                    transform: translate3d(1000px,0px,0px)
+                }
+                70% {
+                    transform: translate3d(300px,0px,0px)
+                }
+                100%{
+                    transform: translate3d(0px,0px,0px)
                 }
             }
 
@@ -158,8 +182,9 @@
             <img id="background" class="" src="wide_background.jpg"/>
             <img id="small-background" src="back.jpg" class="col-6"/>
             <div id="sprite-wrapper">
-                <img id="satelite" src="android_gif.gif"/>
+                <a href="https://psyche.asu.edu/" target="_blank"><img id="satelite" src="psyche.png"/></a>
                 <img id="rover" src="fox.gif"/>
+                <img id="cactus" src="https://user-images.githubusercontent.com/11274840/93070609-ee4cd880-f633-11ea-8df1-f629d7c37e81.gif"/>
             </div>
             <div class="card col-6">
                 <nav class="navbar navbar-dark bg-warning">
