@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .row div{padding: 20px 10px; border: 1px solid; border-color: coral;}
+
+        #background{
+            position: absolute;
+            height: 100%;
+            width: auto;
+        }
+
+        .card {
+            
+            border-radius: .25rem;
+            box-shadow: 0 1px 0 rgba(0,0,0,.25);
+            padding: 2rem 2rem 1rem;
+            margin: 0 auto 2rem;
+            position: relative;
+            border: 1px solid #ddd;
+            /* max-width: 29em; */
+            display: block;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            background-color: rgba(255,255,255,.9)
+
+        }
+
+        #page_contents {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 6rem 2rem;
+        }
+
+        #sprite-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #satelite{
+            height: 128px;
+            width: 128px;
+            position: relative;
+            left: 50%;
+            animation: satelite-animation 40s infinite forwards;
+        }
+
+        #rover{
+            height: 120px;
+            width: 208px;
+            position: relative;
+            top: 80%;
+            left: 0px;
+            animation: rover-animation 40s infinite forwards;
+        }
+
+        @keyframes satelite-animation {
+            /* from {left: 0%;}
+            to {left: auto;} */
+
+            /* 0% { top: 0; }
+            50% { top: 30px; left: 20px; }
+            50% { top: 10px; }
+            100% { top: 0; } */
+
+                0% {
+                    transform: translate3d(20px,20px,0px)
+                }
+                25% {
+                    transform: translate3d(300px,50px,100px)
+                }
+                50%{
+                    transform: translate3d(60px,100px,200px)
+                }
+                75%{ 
+                    transform: translate3d(100px,100px,100px)
+                }
+                100%{
+                    transform: translate3d(20px,20px,0px)
+                }
+            }
+        
+            @keyframes rover-animation {
+                0% {
+                    transform: translate3d(0px,0px,0px)
+                }
+                100%{
+                    transform: translate3d(3000px,0px,0px)
+                }
+            }
+
+            @media screen and (max-width : 1920px){
+                #small-background{
+                    visibility: hidden;
+                }
+            }
+            @media screen and (max-width : 906px){
+                
+                #background{
+                    visibility: hidden;
+                }
+
+                #sprite-wrapper{
+                    visibility: hidden;;
+                }
+
+                #small-background{
+                    visibility: visible;
+                }
+            }
+
+    </style>
+  </head>
+  <body>
+    <div id="login-page">
+        <div id="page-contents">
+            <img id="background" class="" src="wide_background.jpg"/>
+            <img id="small-background" src="back.jpg" class="col-6"/>
+            <div id="sprite-wrapper">
+                <img id="satelite" src="android_gif.gif"/>
+                <img id="rover" src="fox.gif"/>
+            </div>
+            <div class="card col-6">
+                <p class="lead">Sun Devils 🔱</p>
+                I am a graduate student at Arizona State University. I work as Psyche Reseach Aide at NASA Mission to Psyche program at ASU. I have created NASA Psyche Android app which engages public with the Psyche mission. I have also revamped Psyche Review app which helps reviewers from ASU, NASA JPL select incoming undergraduate interns for Psyche Inspired Program.
+I can probably talk/code Android application all day long without coffee.
+This is the most facinating thing I have seen in Software Design.
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

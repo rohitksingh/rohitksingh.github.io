@@ -6,151 +6,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title></title>
     <style>
-        .row div{padding: 20px 10px; border: 1px solid; border-color: coral;}
-
-        #background{
-            position: absolute;
-            height: 100%;
-            width: auto;
+        .card-image{
+           height: 200px;
+           padding: 10px;
         }
 
-        .card {
-            
-            border-radius: .25rem;
-            box-shadow: 0 1px 0 rgba(0,0,0,.25);
-            padding: 2rem 2rem 1rem;
-            margin: 0 auto 2rem;
-            position: relative;
-            border: 1px solid #ddd;
-            /* max-width: 29em; */
-            display: block;
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, 0%);
-            background-color: rgba(255,255,255,.9)
-
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         }
 
-        #page_contents {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 6rem 2rem;
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
 
-        #sprite-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        h5, p {
+            font-family: 'MyFont';
         }
 
-        #satelite{
-            height: 128px;
-            width: 128px;
-            position: relative;
-            left: 50%;
-            animation: satelite-animation 40s infinite forwards;
+        .jumbotron{
+            background-color: #a4c639;
         }
 
-        #rover{
+        .android-gif{
             height: 120px;
-            width: 208px;
-            position: relative;
-            top: 80%;
-            left: 0px;
-            animation: rover-animation 40s infinite forwards;
+            width: 120px;
+            animation: android-animation 30s infinite forwards;
         }
 
-        @keyframes satelite-animation {
-            /* from {left: 0%;}
-            to {left: auto;} */
+        .display-1{
+            font-family: 'MyFont';
+        }
 
-            /* 0% { top: 0; }
-            50% { top: 30px; left: 20px; }
-            50% { top: 10px; }
-            100% { top: 0; } */
+        .skills{
+            animation: skills-animation 3s 1 forwards;
+        }
 
+        .tech-used{
+            width: fit-content;
+            margin: 2px;
+            background-color: olivedrab;
+        }
+
+        .btn{
+            width: fit-content;
+            margin-top: 4px;
+        }
+
+        .project-desc{
+            height: fit-content;
+            padding: 10px;
+        }
+
+        
+        .projects{
+           padding: 20px;
+        }
+
+        
+
+        @font-face {
+            font-family: 'MyFont'; 
+            src: url(Arvo-Regular.ttf); 
+        }
+
+        @keyframes skills-animation {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        
+
+        @keyframes android-animation {
                 0% {
-                    transform: translate3d(20px,20px,0px)
+                    transform: translate3d(0px,0px,0px) 
+                }
+                10% {
+                    transform: translate3d(0px,60px,0px)
+                    scale(1.5)
                 }
                 25% {
-                    transform: translate3d(300px,50px,100px)
+                    transform: translate3d(600px,0px,0px)
                 }
-                50%{
-                    transform: translate3d(60px,100px,200px)
+                50% {
+                    transform: translate3d(800px,-200px,0px)
                 }
-                75%{ 
-                    transform: translate3d(100px,100px,100px)
-                }
-                100%{
-                    transform: translate3d(20px,20px,0px)
-                }
-            }
-        
-            @keyframes rover-animation {
-                0% {
-                    transform: translate3d(0px,0px,0px)
+                75% {
+                    transform: translate3d(-200px,-100px,0px)
                 }
                 100%{
-                    transform: translate3d(3000px,0px,0px)
+                    transform: translate3d(0px,0px,0px) ;
                 }
             }
 
-            @media screen and (max-width : 1920px){
-                #small-background{
-                    visibility: hidden;
-                }
-            }
-            @media screen and (max-width : 906px){
-                
-                #background{
-                    visibility: hidden;
-                }
-
-                #sprite-wrapper{
-                    visibility: hidden;;
-                }
-
-                #small-background{
-                    visibility: visible;
-                }
-            }
 
     </style>
   </head>
   <body>
-    <div id="login-page">
-        <div id="page-contents">
-            <img id="background" class="" src="wide_background.jpg"/>
-            <img id="small-background" src="back.jpg" class="col-6"/>
-            <div id="sprite-wrapper">
-                <img id="satelite" src="android_gif.gif"/>
-                <img id="rover" src="fox.gif"/>
+    <div class="jumbotron junbotron-fluid text-white">
+        <div class="container">
+            <h1 class="display-1">Android Projects</h1>
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag ">S</span>
+                    <span class="w3-tag ">K</span>
+                    <span class="w3-tag ">I</span>
+                    <span class="w3-tag ">L</span>
+                    <span class="w3-tag ">L</span>
+                    <span class="w3-tag ">S</span>
+                </div>
             </div>
-            <div class="card col-6">
-                <p class="lead">Sun Devils 🔱</p>
-                I am a graduate student at Arizona State University. I work as Psyche Reseach Aide at NASA Mission to Psyche program at ASU. I have created NASA Psyche Android app which engages public with the Psyche mission. I have also revamped Psyche Review app which helps reviewers from ASU, NASA JPL select incoming undergraduate interns for Psyche Inspired Program.
-I can probably talk/code Android application all day long without coffee.
-This is the most facinating thing I have seen in Software Design.
+            <img class="android-gif" src="android.gif" class="card-img-top card-image" alt="...">
+        </div>
+    </div>
+
+    <div class="row justify-content-center projects">
+        <img class="col-md-2 justify-content-center" src="klapp1.png">
+        <img class="col-md-2 justify-content-center" src="klapp2.png">
+        <div class="card col-4 project-desc">
+            <h2>KLAPP (Kids' Learning App)</h1>
+            <p>An e-learning Android application which makes learning fun for kids. An interactive UI with drag and drop features.</p> 
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag tech-used">Material Design</span>
+                    <span class="w3-tag tech-used">SQLite Database</span>
+                    <span class="w3-tag tech-used">Drag and Drop</span>
+                </div>
             </div>
+            <a href="https://github.com/ser515-team-1/KLAPP"><button type="button" class="btn btn-primary">See in Github</button></a>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center projects">
+        <img class="col-md-2 justify-content-center" src="ola2_framed.png">
+        <img class="col-md-2 justify-content-center" src="ola.png">
+        <div class="card col-4 project-desc">
+            <h2>OLA Play Music App</h1>
+            <p>Online Music Streaming App (OLA Hackathon)</p> 
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag tech-used">Intent Service</span>
+                    <span class="w3-tag tech-used">OAuth-(Google SignIn) (FireBase)</span>
+                    <span class="w3-tag tech-used">SQLite Database</span>
+                    <span class="w3-tag tech-used">Android 6.0 Runtime Permission</span>
+                    <span class="w3-tag tech-used">View Binder (ButterKnife)</span>
+                    <span class="w3-tag tech-used">SearchView</span>
+                    <span class="w3-tag tech-used">Notification</span>
+                    <span class="w3-tag tech-used">Implicit, Explicit Intents</span>
+                    <span class="w3-tag tech-used">Custom RecyclerView Adapters</span>
+                    <span class="w3-tag tech-used">Rest Calls (Volley, Retrofit)</span>
+                    <span class="w3-tag tech-used">JSON Parsing (Moshi)</span>
+                </div>
+            </div>
+            <a href="https://github.com/rohitksingh/OLA_Play_Music_App"><button type="button" class="btn btn-primary">See in Github</button></a>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center projects">
+        <img class="col-md-2 justify-content-center" src="mangoose1.png">
+        <img class="col-md-2 justify-content-center" src="mangoose2.png">
+        <div class="card col-4 project-desc">
+            <h2>Mangoose: Movie App</h1>
+            <p>Search information about your favorite movies, tv shows and actors with Mangoose.
+                Mangoose gets its content from TMDb REST API.</p> 
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag tech-used">Coordinator View</span>
+                    <span class="w3-tag tech-used">CardViews)</span>
+                    <span class="w3-tag tech-used">RecyclerView</span>
+                    <span class="w3-tag tech-used">Custom CircleView</span>
+                    <span class="w3-tag tech-used">BroadcastReceiver</span>
+                    <span class="w3-tag tech-used">Implicit, Explicit Intents</span>
+                    <span class="w3-tag tech-used">Android Transition API</span>
+                    <span class="w3-tag tech-used">Reveal Transition</span>
+                    <span class="w3-tag tech-used">SharedTransition</span>
+                    <span class="w3-tag tech-used">Fragments</span>
+                    <span class="w3-tag tech-used">Moshi</span>
+                </div>
+            </div>
+            <a href="https://github.com/rohitksingh/Mangoose"><button type="button" class="btn btn-primary">See in Github</button></a>
+            <a href="https://play.google.com/store/apps/details?id=com.omdb.rohksin.omdb&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center projects">
+        <img class="col-md-2 justify-content-center" src="bulucu1.png">
+        <img class="col-md-2 justify-content-center" src="bulucu2.png">
+        <div class="card col-4 project-desc">
+            <h2>Bulucu</h1>
+            <p>Free wifi finder app</p> 
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag tech-used">Android Wifi API</span>
+                    <span class="w3-tag tech-used">Bound Service</span>
+                    <span class="w3-tag tech-used">Android 6.0 Runtime Permission</span>
+                    <span class="w3-tag tech-used">Implicit, Explicit Intents</span>
+                    <span class="w3-tag tech-used">BroadcastReceiver</span>
+                    <span class="w3-tag tech-used">Read Security type, SSID , BSSID etc</span>
+                    <span class="w3-tag tech-used">Lottie Animation</span>
+                    <span class="w3-tag tech-used">Multi Language support</span>
+                </div>
+            </div>
+            <a href="https://github.com/rohitksingh/Bulucu"><button type="button" class="btn btn-primary">See in Github</button></a>
+            <a href="https://play.google.com/store/apps/details?id=com.freewifi.rohksin.freewifi"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center projects">
+        <img class="col-md-2 justify-content-center" src="notely1.png">
+        <img class="col-md-2 justify-content-center" src="notely2.png">
+        <div class="card col-4 project-desc">
+            <h2>Notely App</h1>
+            <p>Note taking App</p> 
+            <div id="skills" class="skills">
+                <div class="skill-name">
+                    <span class="w3-tag tech-used">Navigation Drawer</span>
+                    <span class="w3-tag tech-used">Swipe to delete</span>
+                    <span class="w3-tag tech-used">Custom menu</span>
+                    <span class="w3-tag tech-used">SQLite Database</span>
+                </div>
+            </div>
+            <a href="https://github.com/rohitksingh/Notely"><button type="button" class="btn btn-primary">See in Github</button></a>
+            <a href="https://play.google.com/store/apps/details?id=rohksin.com.notely&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
         </div>
     </div>
 
 
 
+
+
+    <script src="project.js" type="text/javascript"></script>
+    <script>
+
+
+    var skills = ['Firebase Cloud Messaging (FCM Foregound and Background Notification)', 'Firebase Authentication', 'Firebase Realtime database', 'SQLite', 'Fragment', 'Background Services', 
+        'Material Design', 'Volley', 'Picasso', 'Multi threading', 'Bound Service', 'Foreground Service', 'IntentService', 'MVVM'
+    ];
+
+    
+
+    for(var i=0;i<skills.length;i++){
+        var span = document.createElement("span");
+        span.className = 'w3-tag w3-blue'
+        span.innerHTML = skills[i];
+        span.style.margin = '4px'
+        document.getElementById("skills").appendChild(span);
+    }
+
+    
+     </script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
