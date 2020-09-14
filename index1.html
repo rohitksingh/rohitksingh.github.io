@@ -70,6 +70,15 @@
             animation: rover-animation 40s infinite forwards;
         }
 
+        @font-face {
+            font-family: 'MyFont'; 
+            src: url(Arvo-Regular.ttf); 
+        }
+
+        h, p {
+            font-family: 'MyFont';
+        }
+
         @keyframes satelite-animation {
             /* from {left: 0%;}
             to {left: auto;} */
@@ -125,9 +134,25 @@
                 }
             }
 
+            .nav-item{
+                color: maroon;
+                
+            }
+
+            .navbar{
+                margin-bottom: 10px;
+            }
+
+            .contribution{
+                width: 64px;
+                height: 64px;
+                margin: 10px;
+            }
+
     </style>
   </head>
   <body>
+    
     <div id="login-page">
         <div id="page-contents">
             <img id="background" class="" src="wide_background.jpg"/>
@@ -137,10 +162,25 @@
                 <img id="rover" src="fox.gif"/>
             </div>
             <div class="card col-6">
+                <nav class="navbar navbar-dark bg-warning">
+                    <div class="container">
+                    <a class="nav-item nav-link" href="index.html">Android Projects</a>
+                    <a class="nav-item nav-link" href="#">Other Projects</a>
+                    <a class="nav-item nav-link" href="#">Online Contribution</a>
+                    </div>
+                  </nav>  
                 <p class="lead">Sun Devils 🔱</p>
-                I am a graduate student at Arizona State University. I work as Psyche Reseach Aide at NASA Mission to Psyche program at ASU. I have created NASA Psyche Android app which engages public with the Psyche mission. I have also revamped Psyche Review app which helps reviewers from ASU, NASA JPL select incoming undergraduate interns for Psyche Inspired Program.
-I can probably talk/code Android application all day long without coffee.
-This is the most facinating thing I have seen in Software Design.
+                <p>Hi, I am Rohit and I am graduate Software Enginnering student at ASU. <br>I work as Reseach Aide for NASA "Mission to Psyche" program at ASU. In this summer, I created NASA Psyche Android app which engages public with the Psyche mission. I have also revamped Psyche Review app which helps reviewers from ASU, NASA JPL select incoming undergraduate interns for Psyche Inspired Program.
+                <br><br>My main area of interest is Android Application development. But I am quick at learning new frameworks. I love to write articles and solutions on Programming.<p>
+                    <div id="skills" class="skills">
+                        <div class="skill-name row justify-content-center projects">
+                            <a href="https://stackoverflow.com/users/4700156/rohit-singh?tab=profile"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91214248-aaffe980-e6c7-11ea-96f4-945f33bdd324.png"/></a>
+                            <a href="https://medium.com/@rohitksingh"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91214419-e4385980-e6c7-11ea-9983-37fab4a04c3c.png"/></a>
+                            <a href="https://play.google.com/store/apps/developer?id=Rohit+Singh"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91215015-bb649400-e6c8-11ea-8de2-cd42e42ff861.png"/></a>
+                            <a href="https://www.linkedin.com/in/rohit94singh/"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91215104-e4852480-e6c8-11ea-8dad-2d69517b05cc.png"/></a>
+                            <a href="https://github.com/rohitksingh"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/93062074-4c27f300-f629-11ea-8376-4a4d3d1d4444.png"/></a>
+                        </div>
+                    </div>    
             </div>
         </div>
     </div>
