@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>About Me</title>
+    <style>
+        .row div{padding: 20px 10px; border: 1px solid; border-color: coral;}
+
+        #background{
+            position: absolute;
+            height: 100%;
+            width: auto;
+        }
+
+        .card {
+            
+            border-radius: .25rem;
+            box-shadow: 0 1px 0 rgba(0,0,0,.25);
+            padding: 2rem 2rem 1rem;
+            margin: 0 auto 2rem;
+            position: relative;
+            border: 1px solid #ddd;
+            /* max-width: 29em; */
+            display: block;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            background-color: rgba(255,255,255,.9)
+
+        }
+
+        #page_contents {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 6rem 2rem;
+        }
+
+        #sprite-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #satelite{
+            height: 128px;
+            width: 128px;
+            position: relative;
+            left: 50%;
+            animation: satelite-animation 40s infinite forwards;
+        }
+
+        #rover{
+            height: 120px;
+            width: 208px;
+            position: relative;
+            top: 80%;
+            left: 0px;
+            animation: rover-animation 40s infinite forwards;
+        }
+
+        #cactus{
+            height: 120px;
+            width: 120px;
+            position: relative;
+            top: 70%;
+            left: 30px;
+            animation: cactus-animation 60s infinite forwards;
+        }
+
+        @font-face {
+            font-family: 'MyFont'; 
+            src: url(Arvo-Regular.ttf); 
+        }
+
+        body, h, p {
+            font-family: 'MyFont';
+        }
+
+        @keyframes satelite-animation {
+            
+                0% {
+                    transform: translate3d(20px,20px,0px)
+                }
+                25% {
+                    transform: translate3d(300px,50px,100px)
+                }
+                50%{
+                    transform: translate3d(60px,100px,200px)
+                }
+                75%{ 
+                    transform: translate3d(100px,100px,100px)
+                }
+                100%{
+                    transform: translate3d(20px,20px,0px)
+                }
+            }
+        
+            @keyframes rover-animation {
+                0% {
+                    transform: translate3d(0px,0px,0px)
+                }
+                100%{
+                    transform: translate3d(3000px,0px,0px)
+                }
+            }
+
+            @keyframes cactus-animation {
+                0% {
+                    transform: translate3d(0px,0px,0px)
+                }
+                50% {
+                    transform: translate3d(1000px,0px,0px)
+                }
+                70% {
+                    transform: translate3d(300px,0px,0px)
+                }
+                100%{
+                    transform: translate3d(0px,0px,0px)
+                }
+            }
+
+            @media screen and (max-width : 1920px){
+                #small-background{
+                    visibility: hidden;
+                }
+            }
+            @media screen and (max-width : 906px){
+                
+                #background{
+                    visibility: hidden;
+                }
+
+                #sprite-wrapper{
+                    visibility: hidden;;
+                }
+
+                #small-background{
+                    visibility: visible;
+                }
+            }
+
+            .nav-item{
+                color: maroon;
+                
+            }
+
+            .navbar{
+                margin-bottom: 10px;
+            }
+
+            .contribution{
+                width: 64px;
+                height: 64px;
+                margin: 10px;
+            }
+
+    </style>
+  </head>
+  <body>
+    
+    <div id="login-page">
+        <div id="page-contents">
+            <img id="background" class="" src="wide_background.jpg"/>
+            <img id="small-background" src="back.jpg" class="col-6"/>
+            <div id="sprite-wrapper">
+                <a href="https://psyche.asu.edu/" target="_blank"><img id="satelite" src="psyche.png"/></a>
+                <img id="rover" src="fox.gif"/>
+                <img id="cactus" src="https://user-images.githubusercontent.com/11274840/93070609-ee4cd880-f633-11ea-8df1-f629d7c37e81.gif"/>
+            </div>
+            <div class="card col-6">
+                <nav class="navbar navbar-dark bg-warning">
+                    <div class="container">
+                    <a class="nav-item nav-link" href="index.html">Android Projects</a>
+                    <a class="nav-item nav-link" href="otherProjects.html">Other Projects</a>
+                    <a class="nav-item nav-link" href="contribution.html">Online Contribution</a>
+                    </div>
+                  </nav>  
+                <p class="lead">Sun Devils 🔱</p>
+                <p>Hi, I am Rohit and I am graduate Software Enginnering student at ASU. <br>I work part time as Research Aide for <a href="https://psyche.asu.edu/">NASA Psyche Mission</a> program at ASU. <br>This summer, I created NASA <a href="https://play.google.com/store/apps/details?id=edu.asu.missiontopsyche">Psyche Android app </a>which engages public with the Psyche mission. I have also revamped Psyche Review Webapp which helps reviewers from ASU, NASA JPL, NASA select incoming undergraduate interns for Psyche Inspired Program.
+                <br><br>My main area of interest is Android Application development. But I am quick at learning new frameworks. I have experience with iOS App development, React, Flask, Bootstrap, AEM<br><br>I love to write articles and solutions on Programming.<p>
+                    <div id="skills" class="skills">
+                        <div class="skill-name row justify-content-center projects">
+                            <a href="https://stackoverflow.com/users/4700156/rohit-singh?tab=profile" target="_blank"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91214248-aaffe980-e6c7-11ea-96f4-945f33bdd324.png"/></a>
+                            <a href="https://medium.com/@rohitksingh" target="_blank"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91214419-e4385980-e6c7-11ea-9983-37fab4a04c3c.png"/></a>
+                            <a href="https://play.google.com/store/apps/developer?id=Rohit+Singh" target="_blank"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91215015-bb649400-e6c8-11ea-8de2-cd42e42ff861.png"/></a>
+                            <a href="https://www.linkedin.com/in/rohit94singh/" target="_blank"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/91215104-e4852480-e6c8-11ea-8dad-2d69517b05cc.png"/></a>
+                            <a href="https://github.com/rohitksingh" target="_blank"><img class="contribution" src="https://user-images.githubusercontent.com/11274840/93062074-4c27f300-f629-11ea-8376-4a4d3d1d4444.png"/></a>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
