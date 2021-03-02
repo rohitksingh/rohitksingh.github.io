@@ -32,8 +32,6 @@
             border-radius: 0;
         }
 
-       
-
         .android-gif{
             height: 120px;
             width: 120px;
@@ -46,24 +44,30 @@
 
         .skills{
             animation: skills-animation 3s 1 forwards;
+            padding-bottom: 16px;
         }
 
         .tech-used{
             width: fit-content;
             margin: 2px;
             background-color: olivedrab;
+            font-size: 12px;
         }
 
         .btn{
             width: fit-content;
             margin-top: 4px;
+            font-size: 12px;
         }
 
         .project-desc{
-            height: fit-content;
             padding: 16px;
+            height: fit-content;
         }
 
+        /* .project-desc > {
+            width: 16px;
+        } */
         
         .projects{
            padding: 20px;
@@ -71,6 +75,18 @@
 
         .nav-item{
             color: aliceblue;
+        }
+
+        .w3-tag{
+            size: 16px;
+        }
+
+        .btn{
+            margin-right: 8px;
+        }
+
+        .button-container{
+            display: flex;
         }
 
         
@@ -171,13 +187,13 @@
                     <span class="w3-tag tech-used">Intent Service</span>
                     <span class="w3-tag tech-used">OAuth-(Google SignIn) (FireBase)</span>
                     <span class="w3-tag tech-used">SQLite Database</span>
-                    <span class="w3-tag tech-used">Android 6.0 Runtime Permission</span>
+                    <span class="w3-tag tech-used">Runtime Permission</span>
                     <span class="w3-tag tech-used">View Binder (ButterKnife)</span>
                     <span class="w3-tag tech-used">SearchView</span>
                     <span class="w3-tag tech-used">Notification</span>
                     <span class="w3-tag tech-used">Implicit, Explicit Intents</span>
                     <span class="w3-tag tech-used">Custom RecyclerView Adapters</span>
-                    <span class="w3-tag tech-used">Rest Calls (Volley, Retrofit)</span>
+                    <span class="w3-tag tech-used">Rest Calls (Volley)</span>
                     <span class="w3-tag tech-used">JSON Parsing (Moshi)</span>
                 </div>
             </div>
@@ -208,8 +224,11 @@
                     <span class="w3-tag tech-used">Moshi</span>
                 </div>
             </div>
-            <a href="https://github.com/rohitksingh/Mangoose"><button type="button" class="btn btn-primary">See in Github</button></a>
-            <a href="https://play.google.com/store/apps/details?id=com.omdb.rohksin.omdb&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            <div class="button-container">
+                <a href="https://github.com/rohitksingh/Mangoose"><button type="button" class="btn btn-primary">See in Github</button></a>
+                <a href="https://play.google.com/store/apps/details?id=com.omdb.rohksin.omdb&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            </div>
+            
         </div>
     </div>
 
@@ -231,8 +250,10 @@
                     <span class="w3-tag tech-used">Multi Language support</span>
                 </div>
             </div>
-            <a href="https://github.com/rohitksingh/Bulucu"><button type="button" class="btn btn-primary">See in Github</button></a>
-            <a href="https://play.google.com/store/apps/details?id=com.freewifi.rohksin.freewifi"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            <div class="button-container">
+                <a href="https://github.com/rohitksingh/Bulucu"><button type="button" class="btn btn-primary">See in Github</button></a>
+                <a href="https://play.google.com/store/apps/details?id=com.freewifi.rohksin.freewifi"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            </div>    
         </div>
     </div>
 
@@ -251,8 +272,10 @@
                     <span class="w3-tag tech-used">SQLite Database</span>
                 </div>
             </div>
-            <a href="https://github.com/rohitksingh/Notely"><button type="button" class="btn btn-primary">See in Github</button></a>
-            <a href="https://play.google.com/store/apps/details?id=rohksin.com.notely&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            <div class="button-container">
+                <a href="https://github.com/rohitksingh/Notely"><button type="button" class="btn btn-primary">See in Github</button></a>
+                <a href="https://play.google.com/store/apps/details?id=rohksin.com.notely&hl=en"><button type="button" class="btn btn-success">See on PlayStore</button></a>
+            </div>    
         </div>
     </div>
 
